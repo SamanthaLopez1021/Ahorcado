@@ -60,12 +60,16 @@ body{
 
 }
 .linea{
-    background-color: var(--blanco);
-    width: 40px;
-    height: 3px;
+    border-bottom:3px solid var(--blanco);
+    width: 44px;
     margin: 15px 5px 0;
+    color: var(--blanco);
+    vertical-align: center;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 2rem;
 }
-.abc{
+.container-abecedario{
     background-color: var(--rojo);
     width: 80%;
     margin: 90px 0 10px 0;
@@ -102,4 +106,9 @@ body{
     margin-top: 90px;
     background-color: var(--gris);
     border-radius: 10px;
+}
+.imagen-ahorcado{
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
 }
