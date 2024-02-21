@@ -11,16 +11,15 @@ const btn_start= document.getElementById("inicio")
 let image = document.getElementById("imagen-game")
 let errorCounter=1
 btn_start.addEventListener("click",paintletter)
-// creamos un ciclo for para crear  cada una de las letras recorriendo el array 
+// creamos un ciclo for para crear cada una de las letras recorriendo el array 
 for (let index = 0; index < array_letters.length; index++) {
     console.log("letras"+ array_letters[index])
-    // creamos la etiqueta que deceamos en este caso a
+    // creamos la etiqueta que deceamos en este caso button
     let key = document.createElement("button");
     key.classList.add("letra")
     // asignar el evento click a la etiqueta creada 
     key.addEventListener('click', click_letras)
-    key.disabled = true;
-    // asigno la letra a la equite html 
+    // asigno la letra a la etiqueta html 
     key.innerHTML=array_letters[index].toUpperCase()
     // pintamos o agragamos nuestras teclas al dom 
     container_keys.appendChild(key)
@@ -44,20 +43,24 @@ function click_letras(event) {
         let src=`/img/ahorcado/hm${errorCounter}.png`
         image.setAttribute("src", src);
     }
+    
 }
 function paintletter(event) {
+    
     console.log("click aqui")
     
-    // pinta los objetos line en el dom de la palabra seleccionada 
+    // pinta los objetos linea en el dom de la palabra seleccionada 
     for (let i = 0; i < word.length; i++) {
         let letterDom =document.createElement("div");
         letterDom.classList.add("linea")
         containerWords.appendChild(letterDom)
     }
+
+
 }
 function changeSource(errorCounter){
     console.log(errorCounter)
     if(errorCounter >= 15){
-        alert("your lost")
+        window.idPerdio.click()
     }
 }
