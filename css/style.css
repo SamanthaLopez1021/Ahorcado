@@ -14,6 +14,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(2px);
+    height: 100vh;
 }
 .encabezado{
     background-color: var(--gris);
@@ -79,8 +80,10 @@ body{
 }
 .contenedor-letras{
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
     
 }
 .letra{
@@ -215,4 +218,51 @@ body{
     position: fixed;
     inset: 0px;
     z-index: 99;
+}
+
+@media (min-width:1920px)  {
+    .encabezado{
+        height: 100px;
+    }
+    .encabezado img{
+        width: 130px;
+    }
+    .encabezado h1{
+        font-size: 2.8rem;
+    }
+    .contenedor{
+        display: flex;
+        align-items: center;
+    }
+    .contenido-palabra{
+        margin-top:160px;
+    }
+    .contenido-palabra h2 {
+        font-size: 2.25rem;
+    }
+    .palabra{
+        margin-top: 15px;
+    }
+    .linea{
+        width: 48px;
+        margin: 15px 8px 0;
+    }
+    .container-abecedario{
+        margin: 90px 0 20px 0;
+        padding: 15px;
+    }
+    .letra{
+        width: 60px;
+        height: 35px;
+        padding: 10px;
+        font-weight: 800;
+    }
+    .btn_iniciar{
+        padding: 14px 35px;
+        margin: 15px;
+        font-size: 1.50rem;
+    }
+    .ahorcado{
+        margin-top: 140px;
+    }
 }
